@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Helvetica', sans-serif; padding: 40px; }
+        .header { display: flex; justify-content: space-between; margin-bottom: 40px; }
+        .company-info { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th { background: #f3f4f6; padding: 12px; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #e5e7eb; }
+        .totals { margin-top: 30px; text-align: right; }
+        .total-row { font-weight: bold; border-top: 2px solid #000; padding-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>{{ company_name }}</h1>
+            <p>{{ company_address }}</p>
+        </div>
+        <div>
+            <h1>INVOICE</h1>
+            <p>#{{ invoice_number }}</p>
+        </div>
+    </div>
+    
+    <div class="company-info">
+        <div style="float: left;">
+            <strong>Bill To:</strong><br>
+            {{ customer_name }}<br>
+            {{ customer_company }}<br>
+            {{ customer_email }}
+        </div>
+        <div style="float: right; text-align: right;">
+            <strong>Issue Date:</strong> {{ issue_date }}<br>
+            <strong>Due Date:</strong> {{ due_date }}<br>
+            <strong>Status:</strong> {{ status }}
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.description }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>${{ item.unit_price }}</td>
+                <td>${{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="totals">
+        <p>Subtotal: ${{ subtotal }}</p>
+        <p>Tax ({{ tax_rate }}%): ${{ tax_amount }}</p>
+        <p class="total-row">Total: ${{ total }}</p>
+    </div>
+</body>
+</html>
