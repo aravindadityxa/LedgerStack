@@ -2,28 +2,20 @@
 
 ### Manage Invoices. Track Revenue. Grow Business.
 
-LedgerStack is a multi-tenant SaaS Billing & Invoice Management Platform built using React, FastAPI, MySQL, and SQLAlchemy. It enables businesses to manage customers, services, invoices, payments, and revenue analytics through secure organization-based workspaces.
+LedgerStack is a modern Billing & Invoice Management Platform built using React, FastAPI, MySQL, and SQLAlchemy. It helps businesses manage customers, services, invoices, payments, and revenue analytics through a centralized dashboard.
 
-The platform is designed for freelancers, agencies, consultants, startups, and small businesses that need a centralized solution for billing operations, invoice generation, payment tracking, and business reporting.
+The platform streamlines billing workflows by providing secure authentication, customer management, invoice generation, PDF exports, payment tracking, and business insights in a clean and responsive interface.
 
 ---
 
 ## Features
 
-### Multi-Tenant SaaS Architecture
-
-* Organization-Based Workspaces
-* Data Isolation Between Organizations
-* Role-Based Access Control
-* Secure Multi-User Environment
-
-### Authentication & Security
+### Authentication
 
 * JWT Authentication
 * User Registration & Login
 * Password Hashing
 * Protected Routes
-* Secure API Access
 
 ### Dashboard Analytics
 
@@ -31,15 +23,14 @@ The platform is designed for freelancers, agencies, consultants, startups, and s
 * Customer Statistics
 * Invoice Insights
 * Payment Tracking
-* Monthly Revenue Trends
-* Business Performance Monitoring
+* Revenue Analytics
 
 ### Customer Management
 
 * Add Customers
 * Edit Customer Information
 * Delete Customers
-* Search Customers
+* Search & Filter Customers
 * Pagination Support
 
 ### Service Management
@@ -56,7 +47,6 @@ The platform is designed for freelancers, agencies, consultants, startups, and s
 * Duplicate Invoices
 * Invoice Status Tracking
 * Automatic Tax Calculation
-* Real-Time Total Calculation
 * PDF Invoice Generation
 
 ### Payment Tracking
@@ -66,13 +56,12 @@ The platform is designed for freelancers, agencies, consultants, startups, and s
 * Outstanding Payment Monitoring
 * Payment History
 
-### Reports & Analytics
+### Reports
 
 * Revenue Reports
-* Customer Reports
 * Invoice Reports
+* Customer Reports
 * Date Range Filtering
-* Business Insights Dashboard
 
 ---
 
@@ -109,56 +98,6 @@ The platform is designed for freelancers, agencies, consultants, startups, and s
 
 ---
 
-## Key SaaS Features
-
-### Organization Management
-
-Each company operates in its own isolated workspace.
-
-Example:
-
-```text
-Organization A
-├── Customers
-├── Services
-├── Invoices
-└── Payments
-
-Organization B
-├── Customers
-├── Services
-├── Invoices
-└── Payments
-```
-
-Users can only access data belonging to their organization.
-
----
-
-### Role-Based Access Control
-
-Supported Roles:
-
-* Owner
-* Admin
-* Staff
-
-Permissions can be customized based on business requirements.
-
----
-
-### Data Isolation
-
-All business data is scoped to an organization.
-
-This ensures:
-
-* Security
-* Privacy
-* Multi-Tenant Scalability
-
----
-
 ## System Architecture
 
 ```text
@@ -181,9 +120,9 @@ MySQL Database
 ### Dashboard
 
 * Revenue Metrics
-* Invoice Statistics
 * Customer Insights
-* Activity Feed
+* Invoice Statistics
+* Activity Monitoring
 
 ### Customers
 
@@ -290,14 +229,13 @@ http://localhost:8000/redoc
 
 ## Future Enhancements
 
-* Subscription Plans
 * Email Invoice Delivery
 * GST Reports
 * Payment Gateway Integration
 * Expense Tracking
+* Multi-Currency Support
 * Mobile Application
 * Advanced Analytics
-* Audit Logs
 
 ---
 
@@ -306,15 +244,14 @@ http://localhost:8000/redoc
 This project demonstrates:
 
 * Full-Stack Development
-* Multi-Tenant SaaS Architecture
 * REST API Development
 * Authentication & Authorization
-* Role-Based Access Control
 * Database Design
 * SQLAlchemy ORM
 * MySQL Integration
 * PDF Generation
 * Dashboard Analytics
+* Responsive UI Design
 * Cloud Deployment
 
 ---
@@ -326,8 +263,6 @@ This project demonstrates:
 Computer Science & Engineering Student
 
 Python Full Stack Developer
-
-LinkedIn: https://linkedin.com/in/aravindadityaa
 
 ---
 
